@@ -1,0 +1,25 @@
+@import '../Sass/Variables'
+@import '../Sass/Mixins'
+.sobre
+    @include content
+    justify-content: center
+    gap: 2rem
+.title
+    color: $title-color
+.aboutPic
+    max-width: 40vw
+    max-height: 30vh
+    border-radius: $box-radius
+    box-shadow: -14px 14px 10px 5px $title-color
+.sobre-section
+    max-width: 600px
+    background: $box-color
+    padding: 1.4rem
+    border-radius: $box-radius
+    display: flex
+    flex-direction: column
+    gap: 1.6rem
+    letter-spacing: .1rem
+@media (max-width: 768px)
+    .sobre
+        flex-direction: column

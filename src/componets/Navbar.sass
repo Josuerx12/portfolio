@@ -1,0 +1,68 @@
+@import '../Sass/Variables'
+.navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 40px
+    position: fixed
+    width: 100%
+    height: 10vh
+    z-index: 999
+    &-logo
+        font-size: 2.3rem
+        color: $txt-color
+    &-menu
+        display: none
+    &-menu-btn
+        border: none
+        width: fit-content
+        height: fit-content
+        background: transparent
+        color: $txt-color
+        & svg
+            font-size: 1.6rem
+            cursor: pointer
+.navbar-menu-mobile
+    display: none
+.active
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 50vh
+    text-align: center
+    position: relative
+    width: 100%
+    z-index: 1
+    background: $bg-color
+    & ul
+        list-style: none
+        display: flex
+        flex-direction: column
+        gap: .5rem
+        & li
+            & a
+                font-size: 1.2rem
+                font-weight: 400
+                letter-spacing: .1rem
+                text-decoration: none
+                color: $txt-color
+@media (min-width: 768px)
+    .navbar
+        &-menu-btn
+            display: none
+        &-menu
+            display: flex
+            align-items: center
+            justify-content: center
+            & ul
+                display: flex
+                gap: 1rem
+                & li
+                    & a
+                        font-size: 1.3rem
+                        transition: .3s
+                        color: $txt-color
+                        &:hover
+                            color: #ffffffad
+                        &:active
+                            color: #ffffff49

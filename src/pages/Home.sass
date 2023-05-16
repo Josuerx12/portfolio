@@ -1,0 +1,70 @@
+@import '../Sass/Variables'
+@import '../Sass/Mixins'
+.home
+    @include content
+    justify-content: center
+    gap: 2rem
+.presentation
+    flex: 2
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    & h2
+        font-size: 3rem
+        font-weight: 800
+    & p
+        font-size: 1.8rem
+        letter-spacing: .1rem
+        line-height: 2.2rem
+        text-align: justify
+    & .proffesional-links
+        display: flex
+        gap: 1.3rem
+        align-items: center
+        & a
+            color: $txt-color
+            & svg
+                font-size: 2rem
+            &:hover
+                color: #ffffff9f
+                transform: translateY(-8px)
+                transition: .5s
+        & button
+            border: none
+            & a
+                padding: .8rem 1.2rem
+                border-radius: $btn-radius
+                background: $title-color
+                font-size: 1.2rem
+                transition: .3s
+                color: #fff200
+                pointer-events: stroke
+                box-shadow: 0px 0px 10px 0px #575757
+                &:hover
+                    box-shadow: 0px 0px 5px 1px #fffccc
+                    opacity: 1
+                    color: $txt-color
+.profilePic
+    position: relative
+    flex: 1
+    height: 50vh
+    opacity: 90%
+    border-radius: $box-radius
+    box-shadow: 18px 15px 8px 1px $title-color
+    transition: .6s
+    cursor: pointer
+    &:hover
+        scale: 1.05
+
+@media ( max-width: 768px )
+    .home
+        height: 100%
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 4rem
+    .presentation
+        flex: 0
+    .profilePic
+        flex: 0
+        width: 250px
