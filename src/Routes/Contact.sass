@@ -1,0 +1,69 @@
+@import '../Sass/Mixins'
+@import '../Sass/Variables'
+.contact
+    width: 100%
+    min-height: calc(100vh - 3rem)
+    display: flex
+    flex-direction: column
+    padding: 5rem 2rem
+    gap: 2rem
+    cursor: default
+    align-items: center
+    margin-top: 3rem
+    &-box
+        display: flex
+        flex-direction: column
+        margin: auto
+        gap: 2rem
+        background: $box-color
+        padding: 2rem
+        border-radius: $box-radius
+        width: fit-content
+        & .tel
+            @include center
+            gap: 1rem
+            font-size: 1.4rem
+            & h3
+                display: flex
+                gap: .3rem
+                justify-content: center
+                align-items: center
+                & svg
+                    color: #a7a7a7
+                    font-size: 2rem
+            & a
+                color: $title-color
+                &:hover
+                    text-decoration: underline
+        & .mail
+            @include center
+            gap: 1rem
+            font-size: 1.4rem
+            & h3
+                display: flex
+                gap: .3rem
+                justify-content: center
+                align-items: center
+                & svg
+                    color: #4bb5fc
+                    font-size: 2rem
+            & a
+                color: $title-color
+                &:hover
+                    text-decoration: underline
+        & .linkedin
+            @include center
+            gap: 1rem
+            font-size: 1.4rem
+            & h3
+                display: flex
+                gap: .3rem
+                justify-content: center
+                align-items: center
+                & svg
+                    color: #0099ff
+                    font-size: 2rem
+            & a
+                color: $title-color
+                &:hover
+                    text-decoration: underline

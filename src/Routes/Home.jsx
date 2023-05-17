@@ -4,20 +4,22 @@ import "./Home.sass";
 
 const home = () => {
   return (
-    <section className="home">
+    <main className="home">
       <div className="presentation">
         <h2>Desenvolvedor Front-End</h2>
         <p>
           Olá sou Josue Carvalho. Sou Desenvolvedor Front-End e trabalho com
           React.
         </p>
-        <div className="proffesional-links">
-          <a href="https://google.com" target="_blank" rel="noreferrer">
-            <FaLinkedinIn />
-          </a>
-          <a href="https://google.com" target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
+        <div className="professional-links">
+          <div className="social-links">
+            <a href="https://google.com" target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://google.com" target="_blank" rel="noreferrer">
+              <FaGithub />
+            </a>
+          </div>
           <button>
             <a href="https://google.com" target="_blank" rel="noreferrer">
               Download CV
@@ -26,7 +28,7 @@ const home = () => {
         </div>
       </div>
       <img className="profilePic" src={profilePic} />
-    </section>
+    </main>
   );
 };
 

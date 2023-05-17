@@ -2,7 +2,7 @@ import "./About.sass";
 import aboutPic from "../assets/imgs/developmentPic.jpg";
 const About = () => {
   return (
-    <section className="sobre">
+    <main className="sobre">
       <img className="aboutPic" src={aboutPic} alt="about pic" />
       <div className="sobre-section">
         <h3 className="title">Sobre</h3>
@@ -18,7 +18,7 @@ const About = () => {
           including versions of Lorem Ipsum.
         </p>
       </div>
-    </section>
+    </main>
   );
 };
 

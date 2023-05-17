@@ -5,11 +5,11 @@ import "./index.sass";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //pages
-import Error from "./pages/Error.jsx";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Projects from "./pages/Projects.jsx";
-import Contact from "./pages/Contact.jsx";
+import Error from "./Routes/Error.jsx";
+import Home from "./Routes/Home.jsx";
+import About from "./Routes/About.jsx";
+import Projects from "./Routes/Projects.jsx";
+import Contact from "./Routes/Contact.jsx";
 
 const router = createBrowserRouter([
   {
