@@ -4,6 +4,7 @@
     @include content
     justify-content: center
     gap: 5rem
+    margin-top: 3rem
 .title
     color: $title-color
     font-size: 2.6rem
@@ -25,6 +26,28 @@
         font-size: 1.1rem
         letter-spacing: 0.05rem
         text-align: justify
+
+.skills
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 1rem
+.technologies
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: center
+    gap: 2rem
+    background: $box-color
+    padding: 1rem
+    border-radius: $box-radius
+    & img
+        width: 60px
+        height: 60px
+        transition: .3s
+        &:hover
+            scale: 1.25
 @media (max-width: 1000px)
     .sobre
         flex-direction: column
