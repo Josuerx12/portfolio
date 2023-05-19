@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import "./Navbar.sass";
 const Navbar = () => {
   const [open, setOpen] = useState(true);
   const clickHandler = () => setOpen(!open);
-
+  const { t } = useTranslation();
   return (
     <div className="container">
       <header className="navbar">
@@ -13,16 +14,16 @@ const Navbar = () => {
         <nav className={"navbar-menu"}>
           <ul>
             <li>
-              <Link to="/">Inicio</Link>
+              <Link to="/">{t("Inicio")}</Link>
             </li>
             <li>
-              <Link to="/sobre">Sobre</Link>
+              <Link to="/sobre">{t("Sobre")}</Link>
             </li>
             <li>
-              <Link to="/projetos">Projetos</Link>
+              <Link to="/projetos">{t("Projetos")}</Link>
             </li>
             <li>
-              <Link to="/contato">Contato</Link>
+              <Link to="/contato">{t("Contato")}</Link>
             </li>
           </ul>
         </nav>
@@ -37,22 +38,22 @@ const Navbar = () => {
           <ul>
             <li>
               <Link onClick={clickHandler} to="/">
-                Inicio
+                {t("Inicio")}
               </Link>
             </li>
             <li>
               <Link onClick={clickHandler} to="/sobre">
-                Sobre
+                {t("Sobre")}
               </Link>
             </li>
             <li>
               <Link onClick={clickHandler} to="/projetos">
-                Projetos
+                {t("Projetos")}
               </Link>
             </li>
             <li>
               <Link onClick={clickHandler} to="/contato">
-                Contato
+                {t("Contato")}
               </Link>
             </li>
           </ul>

@@ -2,7 +2,6 @@
 @import '../Sass/Mixins'
 .home
     @include content
-
 .presentation
     flex: 2
     display: flex
@@ -32,9 +31,9 @@
                 font-size: 2rem
             &:hover
                 color: #ffffff9f
-                transform: translateY(-8px)
+                transform: translateY(-4px)
                 transition: .5s
-        & button
+        & .cv
             border: none
             & a
                 background: $title-color
@@ -46,9 +45,12 @@
                 border-radius: $btn-radius
                 font-size: 1.2rem
                 transition: .3s
+                cursor: pointer
                 &:hover
-                    box-shadow: 0px 0px 4px 4px #1a5bb1
-                    scale: 1.05
+                    box-shadow: 0px 0px 15px 1px #9b9b9b
+                    scale: 1.1
+                &:active
+                    color: #ffffff7e
 .profilePic
     position: relative
     flex: 1

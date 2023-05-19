@@ -1,28 +1,35 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import profilePic from "../assets/imgs/profilePic.jpg";
 import "./Home.sass";
+import { useTranslation } from "react-i18next";
 
 const home = () => {
+  const { t } = useTranslation();
   return (
     <main className="home">
       <div className="presentation">
-        <h2>Desenvolvedor Front-End</h2>
-        <p>
-          Olá sou Josue Carvalho. Sou Desenvolvedor Front-End e trabalho com
-          React.
-        </p>
+        <h2>{t("Profissao")}</h2>
+        <p>{t("QuemSouEu")}</p>
         <div className="professional-links">
           <div className="social-links">
-            <a href="https://www.linkedin.com/in/josueaze12/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/josueaze12/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="https://github.com/Josuerx12" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/Josuerx12"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub />
             </a>
           </div>
-          <button>
+          <button className="cv">
             <a to="/" target="_blank" rel="noreferrer">
-              Download CV
+              {t("DownloadCv")}
             </a>
           </button>
         </div>

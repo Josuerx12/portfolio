@@ -2,14 +2,13 @@
 @import '../Sass/Variables'
 .contact
     width: 100%
-    min-height: calc(100vh - 3rem)
+    min-height: 100vh
     display: flex
     flex-direction: column
-    padding: 5rem 2rem
+    padding: 2rem 2rem
     gap: 2rem
     cursor: default
     align-items: center
-    margin-top: 3rem
     &-box
         display: flex
         flex-direction: column
@@ -67,3 +66,13 @@
                 color: $title-color
                 &:hover
                     text-decoration: underline
+@media (max-width:768px)
+    .tel
+        flex-direction: column
+        text-align: center
+    .mail
+        flex-direction: column
+        text-align: center
+    .linkedin
+        flex-direction: column
+        text-align: center
