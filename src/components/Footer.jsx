@@ -6,4 +6,4 @@ const Footer = () => {
   return <footer>{t("Footer")}</footer>;
 };
 
-export { Footer };
+export default Footer;
