@@ -13,15 +13,15 @@ const home = () => {
         </p>
         <div className="professional-links">
           <div className="social-links">
-            <a href="https://google.com" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/josueaze12/" target="_blank" rel="noreferrer">
               <FaLinkedinIn />
             </a>
-            <a href="https://google.com" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Josuerx12" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
           </div>
           <button>
-            <a href="https://google.com" target="_blank" rel="noreferrer">
+            <a to="/" target="_blank" rel="noreferrer">
               Download CV
             </a>
           </button>

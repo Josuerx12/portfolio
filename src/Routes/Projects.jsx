@@ -17,35 +17,41 @@ const Projects = () => {
     getData()
   },[])
 
-  const portfolio = data.portfolio.map((p, i)=> (
-    <div key={i} className="project">
-      <img className="project-img" src={p.img} alt={p.name} />
-      <div className="project-desc">
-        <h3>{p.name}</h3>
-        <p>{p.desc}</p>
-        <a
-          className="vizualizar"
-          href={p.pageUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-              Visitar Aplicação
-        </a>
-        <a
-          href={p.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Código <FaGithub />
-        </a>
-      </div>
-    </div>
-  ))
+  const renderPortfolio = () => {
+    if(data && data.portfolio) {
+        return data.portfolio.map((p, i)=> (
+        <div key={i} className="project">
+          <img className="project-img" src={p.img} alt={p.name} />
+          <div className="project-desc">
+            <h3>{p.name}</h3>
+            <p>{p.desc}</p>
+            <a
+              className="vizualizar"
+              href={p.pageUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+                  Visitar Aplicação
+            </a>
+            <a
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Código <FaGithub />
+            </a>
+          </div>
+        </div>
+      ))
+    } 
+    return <h1 className="title">Carregando</h1>
+  }
+
   
   return (
     <main className="projects">
       <h6 className="title">Projetos</h6>
-      {portfolio}
+      {renderPortfolio()}
     </main>
   );
 };
