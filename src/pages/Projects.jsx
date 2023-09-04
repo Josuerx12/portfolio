@@ -8,28 +8,30 @@ const Projects = () => {
   const { t } = useTranslation();
   const { data, isLoading, error } = useQuery("reposUser", async () => {
     const res = await api.get("/josuerx12/repos");
-    return await res.data;
+    return res.data.filter((i) => i.name !== "josuerx12");
   });
-
-  console.log(data);
 
   const renderPortfolio = () => {
     if (!isLoading && !error && data) {
       return data.map((p) => (
         <div key={p.id} className="project">
-          <img className="project-img" src={p.img} alt={p.name} />
+          <img
+            className="project-img"
+            src={`/projects/${p.name}.webp`}
+            alt={p.name}
+          />
           <div className="project-desc">
             <h3>{p.name}</h3>
-            <p>{t(p.desc)}</p>
+            <p>{t(p.description)}</p>
             <a
               className="vizualizar"
-              href={p.pageUrl}
+              href={p.homepage}
               target="_blank"
               rel="noreferrer"
             >
               {t("Visitar")}
             </a>
-            <a href={p.url} target="_blank" rel="noreferrer">
+            <a href={p.svn_url} target="_blank" rel="noreferrer">
               {t("Codigo")} <FaGithub />
             </a>
           </div>
