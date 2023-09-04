@@ -4,13 +4,14 @@ import App from "./App.jsx";
 import "./index.sass";
 import "./i18n/index.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 //pages
-import Error from "./Routes/Error.jsx";
-import Home from "./Routes/Home.jsx";
-import About from "./Routes/About.jsx";
-import Projects from "./Routes/Projects.jsx";
-import Contact from "./Routes/Contact.jsx";
+import Error from "./pages/Error.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Projects from "./pages/Projects.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,8 +39,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}></RouterProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
