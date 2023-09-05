@@ -22,6 +22,7 @@
     "Linkedin": "My Linkedin",
     "Carregando": "Loading....",
     "calculadoraimc": "BMI Calculator",
+    "Created at:": "Created at:",
     "Controle-Financeiro": "Financial Control",
     "Conversor-de-Moedas": "Currency Converter",
     "Backend desenvolvido em NodeJS com o framework ExpressJS para o app task manager. O backend conciste em um sistema de autenticação aonde após o usuário criar sua conta ele consegue utilizar o app para gerenciar suas tarefas.": "Backend developed in Node.js with the Express.js framework for the task manager app. The backend consists of an authentication system where, after the user creates their account, they can use the app to manage their tasks.",

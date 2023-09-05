@@ -20,19 +20,26 @@ const Projects = () => {
         data &&
         data.map((p) => (
           <div key={p.id} className="project">
-            <img
-              className="project-img"
-              src={`/projects/${p.name}.webp`}
-              alt={p.name}
-            />
+            <div className="project-infos">
+              <img
+                className="project-img"
+                src={`/projects/${p.name}.webp`}
+                alt={p.name}
+              />
+              <p className="createdAT">
+                <span>{t("Created at:")} </span>
+                {p.pushed_at.split("T")[0].replace(/-/g, "/")}
+              </p>
+            </div>
             <div className="project-desc">
               <h3>{t(p.name)}</h3>
               <p>{t(p.description)}</p>
-              <p className="technologies">
+              <p className="topics">
+                <b>Tags:</b>
                 {p.topics.map((tech) => (
-                  <>
-                    <span className="tech">{tech}</span>
-                  </>
+                  <span className="tech" key={tech}>
+                    #{tech}
+                  </span>
                 ))}
               </p>
               <a
