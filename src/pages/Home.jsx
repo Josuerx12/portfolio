@@ -3,7 +3,6 @@ import "./Home.sass";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "react-query";
 import { api } from "../utils/apiConfig";
-import curriculum from "../assets/curriculum-ptbr.pdf";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -35,7 +34,11 @@ const Home = () => {
             </a>
           </div>
           <button className="cv">
-            <a to={curriculum} target="_blank" rel="noreferrer">
+            <a
+              href="https://raw.githubusercontent.com/Josuerx12/portfolio/master/src/assets/curriculum-ptbr.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               {t("DownloadCv")}
             </a>
           </button>
