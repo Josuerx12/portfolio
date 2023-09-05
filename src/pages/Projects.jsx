@@ -8,7 +8,9 @@ const Projects = () => {
   const { t } = useTranslation();
   const { data, isLoading, error } = useQuery("reposUser", async () => {
     const res = await api.get("/josuerx12/repos");
-    return res.data.filter((i) => i.name !== "josuerx12");
+    return res.data.filter(
+      (i) => i.name !== "josuerx12" && i.name !== "portfolio"
+    );
   });
 
   return (
