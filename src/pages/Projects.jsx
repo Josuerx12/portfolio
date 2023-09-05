@@ -11,40 +11,44 @@ const Projects = () => {
     return res.data.filter((i) => i.name !== "josuerx12");
   });
 
-  const renderPortfolio = () => {
-    if (!isLoading && !error && data) {
-      return data.map((p) => (
-        <div key={p.id} className="project">
-          <img
-            className="project-img"
-            src={`/projects/${p.name}.webp`}
-            alt={p.name}
-          />
-          <div className="project-desc">
-            <h3>{p.name}</h3>
-            <p>{t(p.description)}</p>
-            <a
-              className="vizualizar"
-              href={p.homepage}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("Visitar")}
-            </a>
-            <a href={p.svn_url} target="_blank" rel="noreferrer">
-              {t("Codigo")} <FaGithub />
-            </a>
-          </div>
-        </div>
-      ));
-    }
-    return <h1 className="title">{t("Carregando")}</h1>;
-  };
-
   return (
     <main className="projects">
       <h6 className="title">{t("Projetos")}</h6>
-      {renderPortfolio()}
+      {isLoading && <h3>Carregando ...</h3>}
+      {!isLoading &&
+        !error &&
+        data &&
+        data.map((p) => (
+          <div key={p.id} className="project">
+            <img
+              className="project-img"
+              src={`/projects/${p.name}.webp`}
+              alt={p.name}
+            />
+            <div className="project-desc">
+              <h3>{t(p.name)}</h3>
+              <p>{t(p.description)}</p>
+              <p className="technologies">
+                {p.topics.map((tech) => (
+                  <>
+                    <span className="tech">{tech}</span>
+                  </>
+                ))}
+              </p>
+              <a
+                className="vizualizar"
+                href={p.homepage}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("Visitar")}
+              </a>
+              <a href={p.svn_url} target="_blank" rel="noreferrer">
+                {t("Codigo")} <FaGithub />
+              </a>
+            </div>
+          </div>
+        ))}
     </main>
   );
 };

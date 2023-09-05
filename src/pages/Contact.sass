@@ -12,13 +12,14 @@
     &-box
         display: flex
         flex-direction: column
-        margin: auto
         gap: 2rem
         background: $box-color
         padding: 2rem
         border-radius: $box-radius
-        width: fit-content
+        max-width: 900px
+        width: 100%
         & .tel
+            margin: auto
             @include center
             gap: 1rem
             font-size: 1.4rem
@@ -35,6 +36,7 @@
                 &:hover
                     text-decoration: underline
         & .mail
+            margin: auto
             @include center
             gap: 1rem
             font-size: 1.4rem
@@ -51,6 +53,7 @@
                 &:hover
                     text-decoration: underline
         & .linkedin
+            margin: auto
             @include center
             gap: 1rem
             font-size: 1.4rem
