@@ -33,7 +33,7 @@ const Projects = () => {
               />
               <p className="createdAT">
                 <span>{t("Created at:")} </span>
-                {p.pushed_at.split("T")[0].replace(/-/g, "/")}
+                {p.pushed_at.toLocaleDateString("pt-BR")}
               </p>
             </div>
             <div className="project-desc">
