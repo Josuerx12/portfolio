@@ -9,7 +9,7 @@ const Projects = () => {
   const { data, isLoading, error } = useQuery("reposUser", async () => {
     const res = await api.get("/josuerx12/repos");
     const filteredRespose = res.data.filter(
-      (i) => i.name !== "josuerx12" && i.name !== "portfolio"
+      (i) => i.name !== "josuerx12" && i.name !== "portfolio" && i.name !== "CatalagoAPI" && i.name !== "Pedido-Facil-Backend"
     );
     return filteredRespose.sort(
       (a, b) => new Date(b.created_at) - new Date(a.created_at)
