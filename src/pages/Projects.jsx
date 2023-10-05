@@ -8,7 +8,8 @@ const Projects = () => {
   const { t } = useTranslation();
   const { data, isLoading, error } = useQuery("reposUser", async () => {
     const res = await api.get("/josuerx12/repos");
-    const userLang = navigator.language
+    const userLang = navigator.language || navigator.userLanguage
+    console.log(userLang)
     const filteredRespose = res.data.filter(
       (i) => i.name !== "josuerx12" && i.name !== "portfolio" && i.name !== "CatalagoAPI" && i.name !== "Pedido-Facil-Backend"
     );
@@ -34,7 +35,7 @@ const Projects = () => {
               />
               <p className="createdAT">
                 <span>{t("Created at:")} </span>
-                {p.pushed_at.toLocaleDateString(userLang)}
+                {p.pushed_at.toLocaleDateString("pt-BR")}
               </p>
             </div>
             <div className="project-desc">
