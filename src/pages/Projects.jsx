@@ -6,10 +6,9 @@ import { api } from "../utils/apiConfig";
 
 const Projects = () => {
   const { t } = useTranslation();
+  const userLang = navigator.language || navigator.userLanguage
   const { data, isLoading, error } = useQuery("reposUser", async () => {
     const res = await api.get("/josuerx12/repos");
-    const userLang = navigator.language || navigator.userLanguage
-    console.log(userLang)
     const filteredRespose = res.data.filter(
       (i) => i.name !== "josuerx12" && i.name !== "portfolio" && i.name !== "CatalagoAPI" && i.name !== "Pedido-Facil-Backend"
     );
