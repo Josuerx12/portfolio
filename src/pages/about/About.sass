@@ -1,20 +1,29 @@
-@import '../Sass/Variables'
-@import '../Sass/Mixins'
+@import '../../Sass/Variables'
+@import '../../Sass/Mixins'
 .sobre
-    @include content
+    display: flex 
+    flex-wrap: wrap
+    flex-direction: row
+    align-items: center
     justify-content: center
     gap: 5rem
 .title
     color: $title-color
     font-size: 2.6rem
 .aboutPic
-    max-width: 40vw
-    max-height: 30vh
+    aspect-ratio: 1
+    @media (max-width: 1350px)
+        display: none
+    flex: 1
+    max-width: 380px
     border-radius: $box-radius
-    box-shadow: -14px 14px 10px 5px $title-color
+    box-shadow: -4px 6px 10px 5px $title-color
+    transition: .8s
+    &:hover
+        scale: 1.1
 .sobre-section
-    max-width: 700px
-    padding: 0rem
+    padding: 0rem 2rem
+    flex-basis: 700px
     border-radius: $box-radius
     display: flex
     flex-direction: column
@@ -37,17 +46,17 @@
     align-items: center
     flex-wrap: wrap
     justify-content: center
-    gap: 2rem
+    gap: 1rem
     background: $box-color
-    padding: 1rem
+    padding: .825rem
     border-radius: $box-radius
     & svg
-        width: 60px
-        height: 60px
-        transition: .3s
-        border-radius: .3rem
+        font-size: 3.6rem
+        border-radius: .425rem
+        padding: .325rem
+        transition: .4s
         &:hover
-            scale: 1.25
+            scale: 1.2
     & #html
         color: #e34c26
         background: #ffffff
@@ -66,10 +75,19 @@
     & #git
         color: #f34f29
         background: #fff
+    & #ts
+        color: #3178c6
+        background: #ffffff
+    & #bs
+        color: #673AB7
+        background: #ffffff
+    & #aws
+        background: #ffffff
+        color: #252F3E
+    & #node
+        color: #6cc24a
+        background: #fff
 
 @media (max-width: 1000px)
     .sobre
         flex-direction: column
-    .aboutPic
-        margin-top: 3rem
-        max-width: 60vw

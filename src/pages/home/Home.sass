@@ -1,11 +1,20 @@
-@import '../Sass/Variables'
-@import '../Sass/Mixins'
+@import '../../Sass/Variables'
+@import '../../Sass/Mixins'
+
 .home
-    @include content
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
 .presentation
     flex: 2
     display: flex
     flex-direction: column
+    @media (max-width: 1250px)
+        align-items: center
+    justify-content: center
+    flex-basis: 656px
     gap: 1.5rem
     margin: 2rem
     & h2
@@ -47,17 +56,19 @@
                 transition: .3s
                 cursor: pointer
                 &:hover
-                    box-shadow: 0px 0px 15px 1px #9b9b9b
+                    box-shadow: 0px 0px 10px 1px #9b9b9b
                     scale: 1.1
                 &:active
                     color: #ffffff7e
 .profilePic
     position: relative
     flex: 1
-    height: 50vh
-    opacity: 90%
+    aspect-ratio: 1
+    @media (max-width: 1250px)
+        flex: 0
+        width: 80%
     border-radius: $box-radius
-    box-shadow: 18px 15px 8px 1px $title-color
+    box-shadow: 8px 8px 10px 1px $title-color
     transition: .6s
     cursor: pointer
     border-top: 6px solid $box-color
@@ -67,20 +78,11 @@
         scale: 1.05
 
 @media ( max-width: 768px )
-    .home
-        height: 100%
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        gap: 4rem
     .presentation
-        flex: 0
+        flex: 1
         flex-wrap: wrap
         & h2
             font-size: 2rem
-    .profilePic
-        flex: 0
-        width: 250px
     .professional-links
         flex-direction: column
         & button

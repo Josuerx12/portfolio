@@ -1,27 +1,23 @@
-@import '../Sass/Mixins'
-@import '../Sass/Variables'
+@import '../../Sass/Variables'
+@import '../../Sass/Mixins'
 .contact
-    width: 100%
-    min-height: 100vh
     display: flex
     flex-direction: column
-    padding: 2rem 2rem
-    gap: 2rem
-    cursor: default
     align-items: center
+    gap: 2rem
     &-box
         display: flex
         flex-direction: column
+        align-items: flex-start
         gap: 2rem
         background: $box-color
         padding: 2rem
         border-radius: $box-radius
-        max-width: 900px
-        width: 100%
+        width: fit-content
         & .tel
-            margin: auto
-            @include center
-            gap: 1rem
+            display: flex
+            align-items: center
+            gap: .625rem
             font-size: 1.4rem
             & h3
                 display: flex
@@ -36,9 +32,9 @@
                 &:hover
                     text-decoration: underline
         & .mail
-            margin: auto
-            @include center
-            gap: 1rem
+            display: flex
+            gap: .625rem
+            align-items: center
             font-size: 1.4rem
             & h3
                 display: flex
@@ -53,9 +49,9 @@
                 &:hover
                     text-decoration: underline
         & .linkedin
-            margin: auto
-            @include center
-            gap: 1rem
+            display: flex
+            gap: .625rem
+            align-items: center
             font-size: 1.4rem
             & h3
                 display: flex

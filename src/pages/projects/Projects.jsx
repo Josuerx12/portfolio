@@ -1,7 +1,7 @@
 import "./Projects.sass";
 import { useQuery } from "react-query";
-import { api } from "../utils/apiConfig";
-import Project from "../components/Project";
+import { api } from "../../utils/apiConfig";
+import Project from "../../components/Project";
 
 import { useTranslation } from "react-i18next";
 

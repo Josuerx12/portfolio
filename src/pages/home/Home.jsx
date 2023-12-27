@@ -2,15 +2,15 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./Home.sass";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "react-query";
-import { api } from "../utils/apiConfig";
+import { api } from "../../utils/apiConfig";
 
 const Home = () => {
   const { t } = useTranslation();
-  const { isLoading, error, data } = useQuery("reposData", async () => {
+  const { isLoading, data } = useQuery("reposData", async () => {
     const res = await api.get("/Josuerx12");
     return res.data;
   });
-  console.log({ isLoading, error, data });
+
   return (
     <main className="home">
       <div className="presentation">
