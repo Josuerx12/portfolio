@@ -25,16 +25,16 @@ const About = () => {
         <div className="skills">
           <h3 className="title">{t("habilidades")}</h3>
           <div className="technologies">
-            <FaHtml5 id="html" />
-            <FaCss3Alt id="css3" />
-            <FaSass id="sass" />
-            <FaJs id="js" />
-            <SiTypescript id="ts" />
-            <FaReact id="react" />
-            <FaGitAlt id="git" />
-            <FaBootstrap id="bs" />
-            <FaAws id="aws" />
-            <FaNodeJs id="node" />
+            <FaHtml5 title="HTML5" id="html" />
+            <FaCss3Alt title="CSS3" id="css3" />
+            <FaSass title="SASS" id="sass" />
+            <FaJs title="JavaScript" id="js" />
+            <SiTypescript title="TypeScript" id="ts" />
+            <FaReact title="React.JS" id="react" />
+            <FaGitAlt title="Git" id="git" />
+            <FaBootstrap title="Bootstrap" id="bs" />
+            <FaAws title="Amazon Web Services" id="aws" />
+            <FaNodeJs title="Node.JS" id="node" />
           </div>
         </div>
       </div>
